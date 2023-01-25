@@ -26,6 +26,8 @@
                 <RowDefinition/>
                 <RowDefinition Height="40"/>
             </Grid.RowDefinitions>
+
+            <!--#region Верхняя панель. Кнопки свернуть и закрвть -->
             <Grid Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -45,10 +47,67 @@
                             Style="{StaticResource topButton}"
                             Margin="5"
                             Click="btnClose_Click">
-                           <Icon:PackIconMaterial Kind="Close" Width="15" Height="15"/>
+                        <Icon:PackIconMaterial Kind="Close" Width="15" Height="15"/>
                     </Button>
                 </StackPanel>
             </Grid>
+            <!--#endregion Верхняя панель. Кнопки свернуть и закрвть-->
+
+            <!--#region Левая панель меню -->
+            <Border Grid.Row="1"
+                    CornerRadius="0,10,25,25"
+                    Grid.RowSpan="2"
+                    Margin="5"
+                    Background="#95AADB">
+                <StackPanel Orientation="Vertical">                    
+                
+                <Button x:Name="bt_CreateBankAcaunt"
+                        Style="{StaticResource menuButton}"                      
+                        >
+                    Создать счет
+                </Button>
+
+                    <Button x:Name="bt_CreateClient"
+                            Style="{StaticResource menuButton}">
+                        Создать клиента
+                    </Button>
+                    <Button x:Name="bt_CreateManager"
+                            Style="{StaticResource menuButton}">
+                        Создать менеджера
+                    </Button>
+                    <Button x:Name="bt_TransferToAccount"
+                            Style="{StaticResource menuButton}"
+                            FontSize="18">
+                        Перевести на счет
+                    </Button>
+                    <Button x:Name="bt_EditClient"
+                            Style="{StaticResource menuButton}"
+                            FontSize="15">
+                        Редактировать клиента
+                    </Button>
+                    <Button x:Name="bt_EditManager"
+                            Style="{StaticResource menuButton}"
+                            FontSize="13">
+                        Редактировать менеджера
+                    </Button>
+                </StackPanel>
+                
+
+            </Border>
+            <Button x:Name="bt_refreshWindow"
+                    Grid.Column="1"
+                    Grid.Row="2"                  
+                    Style="{StaticResource bottomButton}">
+                Обновить окно
+            </Button>
+            <!--#endregion Левая панель меню -->
+            <DataGrid x:Name="dg_bankAcaunt"
+                      Grid.Column="1"
+                      Grid.Row="1"
+                      
+                      Margin="10">
+                
+            </DataGrid>
         </Grid>
     </Border>
 </Window>
