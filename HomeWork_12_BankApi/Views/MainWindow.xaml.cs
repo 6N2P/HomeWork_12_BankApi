@@ -27,25 +27,23 @@ namespace HomeWork_12_BankApi.Views
         public MainWindow()
         {
             InitializeComponent();
-            db = new AppContextDb();
-            db.Manager.Load();
+            db = new AppContextDb();           
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
-          
-            Manager manager = new Manager("Менеджер","Менеджерович","Менеджоров");
-            db.Manager.Add(manager);
-            db.SaveChanges();
-            //Client client = new Client("Василий", "Давыдович", "Чпонькин", DateTime.Now, "89199199999", 1);
-            //db.Clients.Add(client);
-            //db.SaveChanges();
-            //BankAccount bankAccount = new BankAccount(client,6000,true,true,manager);
-          
-            //db.BankAccounts.Add(bankAccount);
-            //db.SaveChanges();
-            
-            
+            if(e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
+        }
+
+        private void btnMinimaze_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
