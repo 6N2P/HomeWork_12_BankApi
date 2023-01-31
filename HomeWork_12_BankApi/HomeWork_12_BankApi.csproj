@@ -93,7 +93,14 @@
     <Compile Include="Class\BankAccount.cs" />
     <Compile Include="Class\Client.cs" />
     <Compile Include="Class\Manager.cs" />
+    <Compile Include="Views\ManagerWindow.xaml.cs">
+      <DependentUpon>ManagerWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ManagerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

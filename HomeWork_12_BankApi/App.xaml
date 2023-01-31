@@ -89,6 +89,43 @@
             </Style.Triggers>
         </Style>
         <!--#endregion Кнопка в низу-->
+        <Style x:Key="texBlockManager" TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#BAC4DB"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <Style x:Key="textboxData" TargetType="TextBox">
+            <Setter Property="Background" Value="#E4D7BD"/>
+            <Setter Property="Foreground" Value="#283554"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="ItemsControl.FontSize" Value="20"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="15 0"/>
+            <Setter Property="ItemsControl.VerticalAlignment" Value="Center"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBoxBase">
+                        <Border x:Name="border" CornerRadius="10" Background="{TemplateBinding Background}" SnapsToDevicePixels="True"
+                                BorderThickness="1" BorderBrush="Black">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="False" HorizontalScrollBarVisibility="Hidden"
+                                          VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="BorderBrush" Value="White" TargetName="border"/>
+                            </Trigger>
+
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="BorderBrush" Value="White" TargetName="border"/>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
     </Application.Resources>
 </Application>

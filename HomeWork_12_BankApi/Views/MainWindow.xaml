@@ -72,7 +72,8 @@
                         Создать клиента
                     </Button>
                     <Button x:Name="bt_CreateManager"
-                            Style="{StaticResource menuButton}">
+                            Style="{StaticResource menuButton}"
+                            FontSize="16">
                         Создать менеджера
                     </Button>
                     <Button x:Name="bt_TransferToAccount"
