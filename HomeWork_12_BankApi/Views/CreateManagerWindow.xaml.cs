@@ -29,5 +29,10 @@ namespace HomeWork_12_BankApi.Views
             if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
+
+        private void btn_CancelManager_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -83,6 +83,9 @@
     <Compile Include="Class\AppContextDb.cs" />
     <Compile Include="ViewModels\DelegateCommand.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\CreateClientWindow.xaml.cs">
+      <DependentUpon>CreateClientWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -93,14 +96,18 @@
     <Compile Include="Class\BankAccount.cs" />
     <Compile Include="Class\Client.cs" />
     <Compile Include="Class\Manager.cs" />
-    <Compile Include="Views\ManagerWindow.xaml.cs">
-      <DependentUpon>ManagerWindow.xaml</DependentUpon>
+    <Compile Include="Views\CreateManagerWindow.xaml.cs">
+      <DependentUpon>CreateManagerWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\CreateClientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ManagerWindow.xaml">
+    <Page Include="Views\CreateManagerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

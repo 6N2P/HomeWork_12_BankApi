@@ -65,7 +65,7 @@
                     Content="Отмена"
                     Style="{StaticResource bottomButton}"
                     Width="auto"
-                    Margin="10,5"/>
+                    Margin="10,5" Click="btn_CancelManager_Click"/>
         </Grid>
     </Border>
 
