@@ -38,27 +38,31 @@
             <TextBox x:Name="tb_SurnameManager"
                      Grid.Column="1"
                      Grid.Row="1"
-                     Style="{StaticResource ResourceKey=textboxData}"/>
+                     Style="{StaticResource ResourceKey=textboxData}"
+                     Text="{Binding Surname}"/>
             <TextBlock Grid.Row="2"
                        Style="{StaticResource texBlockManager}"
                        Text="Имя"/>
             <TextBox x:Name="tb_NameManager"
                      Grid.Column="1"
                      Grid.Row="2"
-                     Style="{StaticResource textboxData}"/>
+                     Style="{StaticResource textboxData}"
+                     Text="{Binding Name}"/>
             <TextBlock Grid.Row="3"
                        Style="{StaticResource texBlockManager}"
                        Text="Отчество"/>
             <TextBox x:Name="tb_PatranomicManager"
                      Grid.Column="1"
                      Grid.Row="3"
-                     Style="{StaticResource textboxData}"/>
+                     Style="{StaticResource textboxData}"
+                     Text="{Binding Patranomic}"/>
             <Button x:Name="btn_CreateManager"
                     Grid.Row="4"
                     Content="Создать"
                     Style="{StaticResource bottomButton}"
                     Width="auto"
-                    Margin="10, 5"/>
+                    Margin="10, 5"
+                    Command="{Binding CreateManager}"/>
             <Button x:Name="btn_CancelManager"
                     Grid.Column="1"
                     Grid.Row="5"
