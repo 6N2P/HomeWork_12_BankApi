@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace HomeWork_12_BankApi.ViewModels
 {
-    internal class DelegateCommand : ICommand
+    public class DelegateCommand : ICommand
     {
         private Action<object> _execute;
         private Func<object, bool> _canExecute;

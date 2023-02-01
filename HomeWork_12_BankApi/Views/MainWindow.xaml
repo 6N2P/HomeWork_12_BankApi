@@ -63,23 +63,30 @@
                 
                 <Button x:Name="bt_CreateBankAcaunt"
                         Style="{StaticResource menuButton}"                      
-                        >
+                        Command="{Binding ShowCreateBankAccountWindow}">
                     Создать счет
                 </Button>
 
                     <Button x:Name="bt_CreateClient"
-                            Style="{StaticResource menuButton}">
+                            Style="{StaticResource menuButton}"
+                            Command="{Binding ShowCreateClientWindow}">
                         Создать клиента
                     </Button>
                     <Button x:Name="bt_CreateManager"
                             Style="{StaticResource menuButton}"
-                            FontSize="16">
+                            FontSize="16"
+                            Command="{Binding ShowCreateManagerWindow}">
                         Создать менеджера
                     </Button>
                     <Button x:Name="bt_TransferToAccount"
                             Style="{StaticResource menuButton}"
                             FontSize="18">
                         Перевести на счет
+                    </Button>
+                    <Button x:Name="bt_EditAccount"
+                            Style="{StaticResource menuButton}"
+                            FontSize="18">
+                        Редактировать счет
                     </Button>
                     <Button x:Name="bt_EditClient"
                             Style="{StaticResource menuButton}"

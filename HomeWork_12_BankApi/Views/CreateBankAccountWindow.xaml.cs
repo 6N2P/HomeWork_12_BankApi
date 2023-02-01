@@ -12,39 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-using HomeWork_12_BankApi.Class;
-using HomeWork_12_BankApi.ViewModels;
-
-
 namespace HomeWork_12_BankApi.Views
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для CreateBankAccountWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CreateBankAccountWindow : Window
     {
-        
-        public MainWindow()
+        public CreateBankAccountWindow()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
-                   
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if(e.LeftButton == MouseButtonState.Pressed)
+            if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
 
-        private void btnMinimaze_Click(object sender, RoutedEventArgs e)
+        private void bt_Cancel_Click(object sender, RoutedEventArgs e)
         {
-            WindowState = WindowState.Minimized;
-        }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
+            Close();
         }
     }
 }

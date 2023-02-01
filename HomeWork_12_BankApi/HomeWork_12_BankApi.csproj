@@ -50,6 +50,7 @@
     <Reference Include="MahApps.Metro.IconPacks.Material, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.IconPacks.Material.4.11.0\lib\net47\MahApps.Metro.IconPacks.Material.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -83,6 +84,9 @@
     <Compile Include="Class\AppContextDb.cs" />
     <Compile Include="ViewModels\DelegateCommand.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\CreateBankAccountWindow.xaml.cs">
+      <DependentUpon>CreateBankAccountWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CreateClientWindow.xaml.cs">
       <DependentUpon>CreateClientWindow.xaml</DependentUpon>
     </Compile>
@@ -99,6 +103,10 @@
     <Compile Include="Views\CreateManagerWindow.xaml.cs">
       <DependentUpon>CreateManagerWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\CreateBankAccountWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CreateClientWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
