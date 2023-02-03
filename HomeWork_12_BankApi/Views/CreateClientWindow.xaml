@@ -54,33 +54,40 @@
             <TextBox x:Name="tb_SurnameClient"
                      Grid.Column="1"
                      Grid.Row="1"
-                     Style="{StaticResource ResourceKey=textboxData}"/>
+                     Style="{StaticResource ResourceKey=textboxData}"
+                     Text="{Binding Surname}"/>
             <TextBox x:Name="tb_NameClient"
                      Grid.Column="1"
                      Grid.Row="2"
-                     Style="{StaticResource ResourceKey=textboxData}"/>
+                     Style="{StaticResource ResourceKey=textboxData}"
+                     Text="{Binding Name}"/>
             <TextBox x:Name="tb_PatronomicClient"
                      Grid.Column="1"
                      Grid.Row="3"
-                     Style="{StaticResource ResourceKey=textboxData}"/>
+                     Style="{StaticResource ResourceKey=textboxData}"
+                     Text="{Binding Patronomic}"/>
             <TextBox x:Name="tb_DateOfBirthClient"
                      Grid.Column="1"
                      Grid.Row="4"
-                     Style="{StaticResource ResourceKey=textboxData}"/>
+                     Style="{StaticResource ResourceKey=textboxData}"
+                     Text="{Binding DateOfBirth}"/>
             <TextBox x:Name="tb_PhoneNumberClient"
                      Grid.Column="1"
                      Grid.Row="5"
-                     Style="{StaticResource ResourceKey=textboxData}"/>
+                     Style="{StaticResource ResourceKey=textboxData}"
+                     Text="{Binding PhoneNumber}"/>
             <TextBox x:Name="tb_StatusClient"
                      Grid.Column="1"
                      Grid.Row="6"
-                     Style="{StaticResource ResourceKey=textboxData}"/>
+                     Style="{StaticResource ResourceKey=textboxData}"
+                     Text="{Binding Status}"/>
             <Button x:Name="btn_CreateClient"
                     Grid.Row="7"
                     Content="Создать"
                     Style="{StaticResource bottomButton}"
                     Width="auto"
-                    Margin="10, 5"/>
+                    Margin="10, 5"
+                    Command="{Binding CreatecreateClient}"/>
             <Button x:Name="btn_CancelCreateClient"
                     Grid.Column="1"
                     Grid.Row="7"

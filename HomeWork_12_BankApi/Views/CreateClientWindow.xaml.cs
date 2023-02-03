@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using HomeWork_12_BankApi.ViewModels;
 namespace HomeWork_12_BankApi.Views
 {
     /// <summary>
@@ -22,6 +23,7 @@ namespace HomeWork_12_BankApi.Views
         public CreateClientWindow()
         {
             InitializeComponent();
+            DataContext = new CreateClientViewModel(this);
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

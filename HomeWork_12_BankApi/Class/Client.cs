@@ -16,7 +16,7 @@ namespace HomeWork_12_BankApi.Class
         /// <summary>
         /// Отчество клиента
         /// </summary>
-        public string Patronomic { get; set; }
+        public string Patronymic { get; set; }
         /// <summary>
         /// Фамилия клиента
         /// </summary>
@@ -32,14 +32,14 @@ namespace HomeWork_12_BankApi.Class
         /// <summary>
         /// Статус вип клиент или ещё какой
         /// </summary>
-        public int Status { get; set; }
+        public string Status { get; set; }
 
         public Client() { }
-        public Client( string name, string patronomic, string surname, DateTime dateOfBirth, string phoneNumber, int status)
+        public Client( string name, string patronomic, string surname, DateTime dateOfBirth, string phoneNumber, string status)
         {
             
             Name = name;
-            Patronomic = patronomic;
+            Patronymic = patronomic;
             Surname = surname;
             DateOfBirth = dateOfBirth;
             PhoneNumber = phoneNumber;
