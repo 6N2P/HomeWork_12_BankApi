@@ -21,5 +21,11 @@ namespace HomeWork_12_BankApi.Class
             Patranomic = patranomic;
             Surname = surname;
         }
+
+        public override string ToString()
+        {
+            string result = $"{Surname} {Name} {Patranomic}";
+            return result;
+        }
     }
 }

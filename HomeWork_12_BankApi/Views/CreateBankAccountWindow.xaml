@@ -47,26 +47,38 @@
             <ComboBox x:Name="cb_Clients"
                       Grid.Column="1"
                       Grid.Row="1"
-                      Style="{StaticResource comboBoxBankAccaunt}"/>
+                      Style="{StaticResource comboBoxBankAccaunt}"
+                      IsSynchronizedWithCurrentItem="True"
+                      ItemsSource="{Binding Clients, UpdateSourceTrigger=PropertyChanged}"
+                      SelectedIndex="{Binding SelectClient}"/>
             <TextBox x:Name="tb_AccountAmount"
                      Grid.Column="1"
                      Grid.Row="2"
-                     Style="{StaticResource textboxData}"/>
+                     Style="{StaticResource textboxData}"
+                     Text="{Binding AccountAmount}"/>
             <ComboBox x:Name="cb_IsDeposit"
                       Grid.Column="1"
                       Grid.Row="3"
-                      Style="{StaticResource comboBoxBankAccaunt}"/>
+                      Style="{StaticResource comboBoxBankAccaunt}"
+                      SelectedIndex="{Binding SelectDeposit}">
+                <TextBlock Text="Нет"/>
+                <TextBlock Text="Да"/>
+            </ComboBox>
             <ComboBox x:Name="cb_Meneger"
                       Grid.Column="1"
                       Grid.Row="4"                      
-                      Style="{StaticResource comboBoxBankAccaunt}"/>
+                      Style="{StaticResource comboBoxBankAccaunt}"
+                      IsSynchronizedWithCurrentItem="True"
+                      ItemsSource="{Binding Managers , UpdateSourceTrigger=PropertyChanged}"
+                      SelectedIndex="{Binding SelectManager}"/>
             <Button x:Name="bt_CreateBankAccaunt"
                     Grid.Column="0"
                     Grid.Row="5"
                     Style="{StaticResource bottomButton}"
                     Width="auto"
                     Margin="10,5"
-                    Content="Создать"/>
+                    Content="Создать"
+                    Command="{Binding CreateBankAccount}"/>
             <Button x:Name="bt_Cancel"
                     Grid.Column="1"
                     Grid.Row="5"

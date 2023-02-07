@@ -45,5 +45,10 @@ namespace HomeWork_12_BankApi.Class
             PhoneNumber = phoneNumber;
             Status = status;
         }
+        public override string ToString()
+        {
+            string result = $"{Surname} {Name} {Patronymic}";
+            return result;
+        }
     }
 }

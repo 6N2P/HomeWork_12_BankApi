@@ -12,7 +12,7 @@ namespace HomeWork_12_BankApi.Class
         /// <summary>
         /// Ид клиента
         /// </summary>
-        public Client ClientID { get; set; }
+        public int ClientID { get; set; }
         /// <summary>
         /// Сумма на счете
         /// </summary>
@@ -20,22 +20,22 @@ namespace HomeWork_12_BankApi.Class
         /// <summary>
         /// Депозитный-не депозитный счет
         /// </summary>
-        public bool IsDeposit { get; set; }
+        public int IsDeposit { get; set; }
         /// <summary>
         /// Открытый или закрытый счёт
         /// </summary>
         public bool IsOpenAccount { get; set; }
-        public Manager ManagerID { get; set; }
+        public int ManagerID { get; set; }
 
         public BankAccount() { }
-        public BankAccount( Client clientID, int accountAmount, bool isDeposit, bool isOpenAccount, Manager managerID)
+        public BankAccount( Client clientID, int accountAmount, int isDeposit, bool isOpenAccount, Manager managerID)
         {
             
-            ClientID = clientID;
+            ClientID = clientID.ID;
             AccountAmount = accountAmount;
             IsDeposit = isDeposit;
             IsOpenAccount = isOpenAccount;
-            ManagerID = managerID;
+            ManagerID = managerID.ID;
         }
     }
 }

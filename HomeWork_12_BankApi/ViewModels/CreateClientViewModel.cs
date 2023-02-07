@@ -14,17 +14,23 @@ namespace HomeWork_12_BankApi.ViewModels
 {
     public class CreateClientViewModel : INotifyPropertyChanged
     {
+        #region PropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")
         {
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));
-        }
+        } 
+        #endregion
 
-        public CreateClientViewModel (CreateClientWindow createClientWindow)
+        #region Construktor
+        public CreateClientViewModel() { }
+        public CreateClientViewModel(CreateClientWindow createClientWindow)
         {
             CreateClientWindow = createClientWindow;
-        }
+            DateOfBirth = DateTime.Now;
+        } 
+        #endregion Construktor
 
         AppContextDb db;
         CreateClientWindow CreateClientWindow { get; set; }
@@ -35,6 +41,7 @@ namespace HomeWork_12_BankApi.ViewModels
         DateTime _dateOfBirth;
         string _phoneNumber;
         string _status;
+
         CreateClientWindow ClientWindow { get; set; }
 
         #region Property
@@ -95,6 +102,7 @@ namespace HomeWork_12_BankApi.ViewModels
         }
         #endregion Prioerty
 
+        #region Comandss
         DelegateCommand _createClient;
         public DelegateCommand CreatecreateClient
         {
@@ -110,7 +118,7 @@ namespace HomeWork_12_BankApi.ViewModels
                         }
                         else
                         {
-                            Client client = new Client(Name,Patronomic,Surname,DateOfBirth,PhoneNumber,Status);
+                            Client client = new Client(Name, Patronomic, Surname, DateOfBirth, PhoneNumber, Status);
                             db = new AppContextDb();
                             db.Client.Add(client);
                             db.SaveChanges();
@@ -120,6 +128,7 @@ namespace HomeWork_12_BankApi.ViewModels
                     }));
             }
 
-        }
+        } 
+        #endregion Comabds
     }
 }

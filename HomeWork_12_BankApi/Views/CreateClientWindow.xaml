@@ -70,7 +70,7 @@
                      Grid.Column="1"
                      Grid.Row="4"
                      Style="{StaticResource ResourceKey=textboxData}"
-                     Text="{Binding DateOfBirth}"/>
+                     Text="{Binding DateOfBirth, StringFormat='d.MM.yyyy'}"/>
             <TextBox x:Name="tb_PhoneNumberClient"
                      Grid.Column="1"
                      Grid.Row="5"
